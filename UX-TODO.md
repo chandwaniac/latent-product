@@ -2,6 +2,7 @@
 
 ## 🎯 Target Users
 - **Creative introspectors** - Artists & creators seeking self-discovery through their creative patterns, using art as a mirror for consciousness and personal growth. These users create emotional dependency, not just functional utility. They're not using Latent to make things; they're using it to understand who they are. When someone discovers their depression lifting through progressively brighter color palettes in their creations, that's not a tool anymore - it's a companion to their inner life.
+- **Creative artists** - Artists who sell work on Dribbble for tokens/NFTs in crypto ecosystem. Requires insanely contextual and personalized media
 - **Early-stage consumer founders** (Singapore, SEA, India) - Need rapid content iteration
 - **Content creators** - Individual creators & influencers needing daily content
 
@@ -51,54 +52,35 @@ Launch after basic analytics are ready:
 
 ### 🎨 UX (User-Facing Features)
 1. [ ] **My Latent Mirror Implementation** - Build shareable self-discovery feature (VIRAL HOOK)
-2. [ ] **User Story #001: Sunset Family Video** - End-to-end photo+scene→video workflow
-3. [ ] **Memory View (/memory)** - Self-reflection through creative history
-4. [ ] **User-level memory** - Remember preferences, style, past creations
-5. [ ] **Veo3 Video Generation** - Google's latest video model integration
-6. [ ] **Open Source Models Integration** - Alternative generation options (Qwen, WAN 2.2)
-7. [ ] **Chat sharing** - Public links for virality
-8. [ ] **Intelligent tool calling** - Context-aware tool selection
-9. [ ] **Conversation context** - Maintain context across messages
-10. [ ] **Chat naming** - Auto-generate from content
-11. [ ] **Improve design for handling multiple tool result components** - Better UI for complex tool chains
-12. [ ] **Slide Deck Generation** - Programmatic slide creation
-13. [ ] **"Raise Request" UI** - Button/modal for users to submit feature requests
-14. [ ] **Script editing in chat** - Canvas mode
-15. [ ] **Command & control interface** - Power user features
-16. [ ] **Flux Kontext integration** - Product placement & compositing
-17. [ ] **Max Edit Kontext** - Advanced editing capabilities
-18. [ ] **Ideogram character edit** - Character consistency
+2. [ ] **Strengthen User-Level Context** - Ensure tool results incorporate user context for personalized outputs
+3. [ ] **Daily Heartbeat Integrations** - Connect with fitness devices (Garmin, Whoop), GitHub, and other daily data sources
+4. [ ] **Latent Native Media Model** - WebGL, programmatic creation based on Latent design theme
+5. [ ] **User Story #001: Sunset Family Video** - End-to-end photo+scene→video workflow
+6. [ ] **Chat sharing** - Public links for virality
+7. [ ] **Veo3 Video Generation** - Google's latest video model integration
+8. [ ] **Open Source Models Integration** - Alternative generation options (Qwen, WAN 2.2)
+9. [ ] **Max Edit Kontext** - Advanced editing capabilities
+10. [ ] **Slide Deck Generation** - Programmatic slide creation
+11. [ ] **Command & control interface** - Power user features
+12. [ ] **Chat naming** - Auto-generate from content
 
 ### 🔧 Infrastructure (Backend & Operations)
 1. [ ] **Basic Analytics Queries** - Understand what users want (TODAY)
-2. [ ] **GCP Direct Deployment** - Production infrastructure on Google Cloud
-3. [ ] **Credits + Stripe Integration** - Stop bleeding money
-4. [ ] **Credits Check Before Tool Execution** - Enforce limits before running tools
-5. [ ] **Chat Analytics Dashboard** - Understand user behavior
-6. [ ] **Automated Insights Pipeline** - LLM analyzes chat data weekly
-7. [ ] **Business Model Decision** - Implement tiers or micropayments
-8. [ ] **Service Configuration** - Dockerize, auth, VPC, secrets
-9. [ ] **DNS & Load Balancing** - latentshot.com configuration
-10. [ ] **Production Deployment Pipeline** - CI/CD with GitHub Actions
-11. [ ] **Monitoring & Operations** - Dashboards, alerts, logging
-12. [ ] **Request aggregation pipeline** - Collect and store user feedback
-13. [ ] **LLM-powered prioritization** - AI analyzes requests and auto-updates this TODO
-14. [ ] **Remove legacy code in video-ai-v2** - Clean up unused/deprecated code
-15. [ ] **Clean up UI repo** - Tech debt
-16. [ ] **Ensure type safety in platform API v2** - Type-safe Go code
+2. [ ] **Analytics Table for Tool Results** - Separate table for analytics on tool results
+3. [ ] **Platform API v2 Events Schema** - Fixed events schema (now v2)
+4. [ ] **Credits + Stripe Integration** - Stop bleeding money
+5. [ ] **Credits Check Before Tool Execution** - Enforce limits before running tools
+6. [ ] **GCP Direct Deployment** - Production infrastructure on Google Cloud
+7. [ ] **Production Deployment Pipeline** - CI/CD with GitHub Actions
+8. [ ] **Monitoring & Operations** - Dashboards, alerts, logging
+9. [ ] **Remove legacy code in video-ai-v2** - Clean up unused/deprecated code
+10. [ ] **Clean up UI repo** - Tech debt
 
 
-## 📝 Notes
-- Challenge: Product placement requires Flux Multi or LORAs
-- Need parity with competitor features
-- Focus on network effects for growth
 
-## 🔮 Vision: User-Driven Development
-**Raise Request System**: Users submit feature requests → LLM analyzes patterns → Auto-updates this TODO
-- Democratizes product development
-- Ensures we build what users actually want
-- Creates tight feedback loop
-- Scales product management with AI
+
+
+
 
 ## 📖 Working Backwards Framework
 **Everything flows from this document:**
@@ -118,11 +100,8 @@ Ship & Learn → Update TODO
 - **Platform API**: `/Users/admin/Desktop/latent-platform-api-v2` - Orchestration, tool registry, database, events
 - **Video AI**: `/Users/admin/Desktop/latent-video-ai-v2` - Image/video generation (Imagen, Veo, Flux)
 - **Auth Service**: `/Users/admin/Desktop/oauth-service` - Google OAuth, JWT tokens
+- **Context Service**: `/Users/admin/Desktop/latent-context-service` - LLM-powered user insights (port 8088)
 
-**Active User Stories:**
-- [001: Sunset Family Video](../latent-platform-api-v2/docs/user-stories/001-sunset-family-video.md) - Photo + Scene → Video
-- 002: Recipe to Cooking Video (Planned)
-- 003: Podcast Clip Generator (Planned)
 
 **Process:**
 1. TODO defines what users need
